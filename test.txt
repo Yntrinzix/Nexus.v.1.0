@@ -1,0 +1,7 @@
+{
+	"id":"1",
+	"name":"test1",
+	"location":"test1",
+	"startDate": "new Date(2017, 03, 13)",
+	"endDate": "new Date(2017, 03, 14)"
+}

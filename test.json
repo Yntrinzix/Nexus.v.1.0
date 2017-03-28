@@ -1,0 +1,27 @@
+[
+{
+	"id":"1",
+	"name":"test1",
+	"location":"test1",
+	"startYear": 2017,
+	"startMonth": 3,
+	"startDay": 10,
+	"endYear": 2017,
+	"endMonth": 3,
+	"endDay": 14
+	
+},
+
+{
+	"id":"2",
+	"name":"test2",
+	"location":"test2",
+	"startYear": 2017,
+	"startMonth": 4,
+	"startDay": 10,
+	"endYear": 2017,
+	"endMonth": 4,
+	"endDay": 14
+	
+}
+]

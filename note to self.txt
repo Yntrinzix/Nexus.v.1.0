@@ -1,0 +1,5 @@
+1. create package.json
+2. npm install --save express
+3. create app.js script
+run node app.js in the console
+4. install ejs // npm install --save ejs

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nexus</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-year-calendar.css" rel="stylesheet">
+  
+  <!-- my styles -->
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap-year-calendar.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-popover.js"></script>
+</head>
+<body class="dashbody">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    
+            <div class="container">
+            
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                  </button>
+                  <a class="navbar-brand" href="#" id="logo-sm">Nexus</a>
+                </div>
+        
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav nav-fonts">
+                    
+                    <li>
+                    	<a href="index.html">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <span class="nav-title">&nbsp;&nbsp;&nbsp;Dashboard</span>
+                    	</a>
+                    </li>
+                    <li  class="active">
+                    	<a href="#">
+                        	<i class="fa fa-calendar-o" aria-hidden="true"></i>
+                            <span class="nav-title">&nbsp;&nbsp;&nbsp;Calendar</span>
+                        </a>
+                    </li> 
+                    <li>
+                    	<a href="#">
+                        	<i class="fa fa-line-chart" aria-hidden="true"></i></i>
+                            <span class="nav-title">&nbsp;&nbsp;&nbsp;Reoprt</span>
+                        </a>
+                    </li> 
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><!-- User welcome info --><a href="#">Welcome Vanny</a></li>
+                    <li><a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Logout </a></li>
+                  </ul>
+                  </div>
+                </div>
+       
+        
+    </nav>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+<div class="container">
+<!-- side nav -->
+		<div class="sidepanel">
+            
+            	<div class="spacer-2">
+                </div>
+            
+            	<div>
+            	  <p >Employee Calendar</p><hr></div>
+                
+                <div class="employee-list">
+                	<div class="sidepanel-buttons">
+                    	
+                        <p class="nav-title">John Mark</p>
+						
+                    </div>
+                    
+                    <div class="sidepanel-buttons">
+                    	
+                        <p class="nav-title">Vany Deloso</p>
+						
+                    </div>
+                    
+                    <div class="sidepanel-buttons">
+                    	
+                        <p class="nav-title">John Frades</p>
+						
+                    </div>
+                    
+                    <div class="sidepanel-buttons">
+                    	
+                        <p class="nav-title">Kaye Pada</p>
+						
+                    </div>
+                	
+                </div>
+                
+                <div class="spacer-2">
+                </div>
+                
+                <div class="spacer-2">&nbsp;
+                </div>
+            	
+            	</div>
+<!--end side nav-->    
+    
+<!-- main content -->
+    <div class="main-panel" style="width:80%">
+        <div data-provide="calendar" id="calendar"></div>
+        
+    	
+        
+        
+            <div class="modal fade" id="event-modal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title" id="mod-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-group">
+                      
+                      	
+                        <input name="event-index" type="text" style="display:none" class="form-control">
+						<input name="event-name" type="text" placeholder="Enter Task Name" class="form-control" required data-validation-required-message="Please enter a Task Name.">
+						<br>
+						<textarea name="event-location" type="text" placeholder="Enter Description" class="form-control" required data-validation-required-message="Please enter the Description"></textarea>
+                        <br>
+                        <div class="input-group input-daterange" data-provide="datepicker">
+							<input name="event-start-date" type="text" class="form-control" disabled>
+							<span class="input-group-addon">to</span>
+							<input name="event-end-date" type="text" class="form-control" disabled>
+						</div>
+                            
+<!--employee select------------------------------------------------------------------------------------------- -->
+                            
+                            <h6 style="text-align:left">Assign Task to:</h6>
+                            <div class="row">
+                            	<div class="col-lg-12">
+                                    <select name="event-employees" style="width:100%" multiple>
+                                      <option value="1">John Mark Martinez</option>
+                                      <option value="2">Vany Deloso</option>
+                                      <option value="3">John Frades</option>
+                                      <option value="4">Kaye Pada</option>
+                                    </select>
+                                </div>
+                               
+                            </div>
+                            
+<!--end employee select--------------------------------------------------------------------------------------- -->
+                            
+                            
+                            <div class="row">
+                            	
+                            	<div class="col-lg-5">
+                                	<h6 style="text-align:left">Priority:</h6>
+                                    <select name="event-priority" style="width:100%">
+                                        <option value="low">Low</option>
+                                        <option value="mid">Mid</option>
+                                        <option value="high">High</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col-lg-2">
+                                	
+                                
+                                </div>
+                                <div class="col-lg-5">
+                                   
+                                </div>
+                            </div>
+                            
+                            
+  							
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success" id="done-event" data-dismiss="modal">Done</button>
+                      	<button type="submit" class="btn btn-success" id="save-event" data-dismiss="modal">Save</button>
+                        
+                        
+                    </div>
+                  </div>
+                  <!-- modal end-->
+                </div>
+              </div>
+            </div>
+        
+        
+       
+    	
+        
+        
+      	
+    </div>
+<!-- main end -->
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+
+                id: '0',
+                name: 'test',
+                location: 'San Francisco, CA',
+		startDate: new Date(2017, 4, 28),
+                endDate: new Date(2017, 4, 29)
+			
+}
